@@ -382,9 +382,106 @@ Zeeshan         2.286999988555908
 
 
 10. Agent name who have rating more than 4.5 
-SOL:
+SOL:select agentname from agentperfomance  where averagerating > 4.5 group by agentname;
+op:Aditya Shinde
+Aditya_iot
+Ameya Jain
+Anirudh
+Ankitjha
+Aravind
+Ayushi Mishra
+Bharath
+Boktiar Ahmed Bappy
+Chaitra K Hiremath
+Deepranjan Gupta
+Harikrishnan Shaji
+Hrisikesh Neogi
+Ishawant Kumar
+Jawala Prakash
+Jayant Kumar
+Jaydeep Dixit
+Khushboo Priya
+Madhulika G
+Mahesh Sarade
+Maitry
+Manjunatha A
+Mithun S
+Mukesh
+Mukesh Rao
+Muskan Garg
+Nandani Gupta
+Nishtha Jain
+Prabir Kumar Satapathy
+Prateek _iot
+Prerna Singh
+Rishav Dash
+Saikumarreddy N
+Sandipan Saha
+Sanjeev Kumar
+Saurabh Shukla
+Shiva Srivastava
+Shivan K
+Shivananda Sonwane
+Shubham Sharma
+Sowmiya Sivakumar
+Sudhanshu Kumar
+Suraj S Bilgi
+Swati
+Vivek
+Wasim
+Zeeshan
 
 11. How many feedback agents have received more than 4.5 average
+solution:select agentname,sum(totalfeedback) from agentperfomance  where averagerating > 4.5 group by agentname;
+Aditya Shinde   73
+Aditya_iot      43
+Ameya Jain      150
+Anirudh         2
+Ankitjha        1
+Aravind         178
+Ayushi Mishra   75
+Bharath         231
+Boktiar Ahmed Bappy     52
+Chaitra K Hiremath      5
+Deepranjan Gupta        83
+Harikrishnan Shaji      80
+Hrisikesh Neogi 183
+Ishawant Kumar  79
+Jawala Prakash  33
+Jayant Kumar    7
+Jaydeep Dixit   179
+Khushboo Priya  134
+Madhulika G     67
+Mahesh Sarade   46
+Maitry  81
+Manjunatha A    132
+Mithun S        93
+Mukesh  17
+Mukesh Rao      1
+Muskan Garg     14
+Nandani Gupta   91
+Nishtha Jain    18
+Prabir Kumar Satapathy  53
+Prateek _iot    54
+Prerna Singh    82
+Rishav Dash     27
+Saikumarreddy N 184
+Sandipan Saha   1
+Sanjeev Kumar   164
+Saurabh Shukla  3
+Shiva Srivastava        2
+Shivan K        130
+Shivananda Sonwane      154
+Shubham Sharma  155
+Sowmiya Sivakumar       16
+Sudhanshu Kumar 2
+Suraj S Bilgi   4
+Swati   103
+Vivek   3
+Wasim   156
+Zeeshan         48
+
+
 12. average weekly response time for each agent 
 13. average weekly resolution time for each agents 
 14. Find the number of chat on which they have received a feedback 
