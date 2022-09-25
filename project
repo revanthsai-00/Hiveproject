@@ -5,8 +5,48 @@ Download Dataset 2 - https://drive.google.com/file/d/1-JIPCZ34dyN6k9CqJa-Y8yxIGq
 Note: both files are csv files. 
 
 1. Create a schema based on the given dataset
+ describe  agentlogging;
+OK
+slno                    int
+agent                   string
+date                    string
+logintine               string
+logouttime              string
+duration                string
+Time taken: 0.197 seconds, Fetched: 6 row(s)
+hive> describe  agentperfomance;
+OK
+slno                    int
+date                    string
+agentname               string
+totalchat               string
+averageresponsetime     string
+averageresolutiontime   string
+averagerating           float
+totalfeedback           int
+Time taken: 0.138 seconds, Fetched: 8 row(s)
+hive> describe  agentperfomancetemp;
+OK
+slno                    string
+date                    date
+agentname               string
+totalchat               int
+averageresponsetime     timestamp
+averageresolutiontime   timestamp
+averagerating           float
+totalfeedback           int
+Time taken: 0.242 seconds, Fetched: 8 row(s)
+hive> describe  agentloggingtemp;
+OK
+agent                   string
+logintime               timestamp
+logouttime              timestamp
+duration                timestamp
+ldate                   date
 
 2. Dump the data inside the hdfs in the given schema location.
+load data local inpath 'file:///home/cloudera/revanth/AgentLogingReport.csv' into table agentlogging;
+load data local inpath 'file:///home/cloudera/revanth/AgentPerfomance.csv' into table agentperfomance;
 3. List of all agents' names.
 solution : select distinct AgentName from agentperfomance
 output:Abhishek
