@@ -558,5 +558,12 @@ Wasim   284
 Zeeshan         335
 
 15. Total contribution hour for each and every agents weekly basis 
-16. Perform inner join, left join and right join based on the agent column and after joining the table export that data into your local system.
+16. Perform inner join, left join and right join based on the agent column and after joining the table export that data into your local system
+sol:
+create table innerjointable1 as select * from agentloggingtemp al inner join agentperfomancetemp ap on al.agent=ap.agentname ;
+create table leftjointable1 as select * from agentloggingtemp al left join agentperfomancetemp ap on al.agent=ap.agentname ;
+create table rightjointable2 as select * from agentloggingtemp al right join agentperfomancetemp ap on al.agent=ap.agentname ;
+insert overwrite local directory '/tmp/out' select * from innerjointable1;
+insert overwrite local directory '/tmp/out' select * from leftjointable1;
+insert overwrite local directory '/tmp/out' select * from rightjointable2;
 17. Perform partitioning on top of the agent column and then on top of that perform bucketing for each partitioning.
