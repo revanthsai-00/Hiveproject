@@ -1406,4 +1406,4 @@ insert overwrite local directory '/tmp/out' select * from innerjointable1;
 insert overwrite local directory '/tmp/out' select * from leftjointable1;
 insert overwrite local directory '/tmp/out' select * from rightjointable2;
 17. Perform partitioning on top of the agent column and then on top of that perform bucketing for each partitioning.
-:
+sol:attached the screenshot in file 
