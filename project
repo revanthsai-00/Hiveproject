@@ -195,6 +195,59 @@ Wasim   2.400000015894572
 Zeeshan         2.286999988555908
 
 5. Total working days for each agents
+select agent,count(ldate) from agentloggingtemp group by agent;
+
+Aditya Shinde   2
+Aditya_iot      18
+Agent   0
+Amersh  8
+Ameya Jain      20
+Ankitjha        8
+Anurag Tiwari   74
+Aravind 20
+Ayushi Mishra   36
+Bharath 18
+Boktiar Ahmed Bappy     34
+Chaitra K Hiremath      26
+Deepranjan Gupta        116
+Dibyanshu       416
+Harikrishnan Shaji      46
+Hrisikesh Neogi 74
+Hyder Abbas     4
+Ineuron Intelligence    2
+Ishawant Kumar  98
+Jawala Prakash  32
+Jaydeep Dixit   22
+Khushboo Priya  36
+Madhulika G     34
+Mahesh Sarade   72
+Maitry  10
+Manjunatha A    16
+Mithun S        28
+Mukesh  6
+Muskan Garg     24
+Nandani Gupta   22
+Nishtha Jain    36
+Nitin M 2
+Prabir Kumar Satapathy  52
+Prateek _iot    34
+Prerna Singh    36
+Rishav Dash     24
+Saikumarreddy N 20
+Sanjeev Kumar   40
+Saurabh Shukla  80
+Shiva Srivastava        30
+Shivan K        72
+Shivananda Sonwane      30
+Shubham Sharma  70
+Sowmiya Sivakumar       48
+Sudhanshu Kumar 22
+Suraj S Bilgi   10
+Swati   10
+Tarun   2
+Wasim   40
+Zeeshan 20
+
 
 6. Total query that each agent have taken 
 solution: select agentname,sum(totalchat) from agentperfomance group by agentname
